@@ -1,7 +1,20 @@
 package world.ucode;
 
-public class Main {
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Main extends Application {
     public static void main(String[] args) {
-        System.out.println("HI!!!!!!!!!!");
+        launch(args);
     }
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            primaryStage.setTitle("tamagotchi");
+            GameMenu menu = new GameMenu(primaryStage);
+        } catch (Exception e) {
+            System.err.println("Exception");
+        }
+    }
+
 }

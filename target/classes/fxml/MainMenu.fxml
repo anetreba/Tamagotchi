@@ -29,7 +29,7 @@
                      <children>
                         <ImageView fitHeight="261.0" fitWidth="364.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@menuImage.gif" />
+                              <Image url="@../menuImage.gif" />
                            </image>
                         </ImageView>
                      </children>
