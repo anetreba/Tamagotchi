@@ -18,7 +18,7 @@
                      <children>
                         <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="NEW GAME" textFill="#3276ff" />
                         <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="LOAD GAME" textFill="#3276ff" />
-                        <Button cancelButton="true" mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="EXIT" textFill="#3276ff" />
+                        <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="EXIT" textFill="#3276ff" />
                      </children>
                   </VBox>
                </children>
@@ -29,7 +29,7 @@
                      <children>
                         <ImageView fitHeight="261.0" fitWidth="364.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../menuImage.gif" />
+                              <Image url="@/menuImage.gif" />
                            </image>
                         </ImageView>
                      </children>

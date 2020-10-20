@@ -10,7 +10,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            primaryStage.setTitle("tamagotchi");
+            primaryStage.setTitle("Tamagotchi");
             GameMenu menu = new GameMenu(primaryStage);
         } catch (Exception e) {
             System.err.println("Exception");
