@@ -12,6 +12,13 @@ public class ControllerGameMenu extends Controller {
         super(primaryStage);
     }
 
+    @FXML
+    Button NewGameButton;
+    @FXML
+    Button LoadGameButton;
+    @FXML
+    Button ExitButton;
+
 //    @FXML
 //    private void HandleNewGame() {
 //        NewGame scene = new NewGame(primaryStage);
@@ -22,10 +29,6 @@ public class ControllerGameMenu extends Controller {
 //        LoadGame scene = new LoadGame(primaryStage);
 //    }
 //
-    @FXML
-    Button NewGameButton;
-    @FXML
-    Button LoadGameButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
