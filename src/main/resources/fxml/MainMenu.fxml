@@ -16,9 +16,9 @@
                <children>
                   <VBox alignment="CENTER" layoutX="-10.0" layoutY="109.0" prefHeight="398.0" prefWidth="207.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="NEW GAME" textFill="#3276ff" />
-                        <Button mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="LOAD GAME" textFill="#3276ff" />
-                        <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="EXIT" textFill="#3276ff" />
+                        <Button fx:id="NewGameButton" mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="NEW GAME" textFill="#3276ff" />
+                        <Button fx:id="LoadGameButton" mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="LOAD GAME" textFill="#3276ff" />
+                        <Button fx:id="ExitButton" cancelButton="true" defaultButton="true" mnemonicParsing="false" prefHeight="71.0" prefWidth="145.0" style="-fx-border-color: WHITE;" text="EXIT" textFill="#3276ff" />
                      </children>
                   </VBox>
                </children>
