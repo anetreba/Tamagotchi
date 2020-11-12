@@ -1,6 +1,7 @@
 package world.ucode.Controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -12,13 +13,22 @@ public class ControllerNewGame extends Controller {
     }
 
     @FXML
+    TextField InputName;
+
+    @FXML
     void chooseGirl() {
-        System.out.println("GIRL");
+        String name = InputName.getText();
+        if (name.length() != 0) {
+            System.out.println("GIRL " + name);
+        }
     }
 
     @FXML
     void chooseBoy() {
-        System.out.println("BOY");
+        String name = InputName.getText();
+        if (name.length() != 0) {
+            System.out.println("BOY " + name);
+        }
     }
 
     @Override
