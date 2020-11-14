@@ -13,6 +13,6 @@ public class Avatar {
     public Avatar(Type type, String name) {
         this.type = type;
         this.name = name;
-        System.out.println("********************\n" + name + " " + toString() + "\n********************");
+        System.out.println("********************\n" + name + " " + type.toString() + "\n********************");
     }
 }
