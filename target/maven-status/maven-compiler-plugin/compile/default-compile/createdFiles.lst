@@ -1,3 +1,8 @@
+world/ucode/Avatar/Type.class
+world/ucode/Controller/ControllerGamePlay.class
 world/ucode/Controller/ControllerNewGame.class
+world/ucode/Avatar/Avatar.class
+world/ucode/GamePlay.class
+world/ucode/Avatar/Action.class
 world/ucode/NewGame.class
 world/ucode/Main.class
