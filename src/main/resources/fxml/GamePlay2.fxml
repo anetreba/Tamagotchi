@@ -6,7 +6,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="336.0" fitWidth="595.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-18.75" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -19,11 +18,12 @@
       <Button fx:id="PlayButton" layoutX="521.0" layoutY="154.0" mnemonicParsing="false" onAction="#HandlePlay" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: none;" />
       <Button fx:id="CleanUpButton" layoutX="477.0" layoutY="181.0" mnemonicParsing="false" onAction="#HandleCleanUp" prefHeight="27.0" prefWidth="120.0" style="-fx-background-color: none;" />
       <Button fx:id="GiveMedicineButton" layoutX="529.0" layoutY="208.0" mnemonicParsing="false" onAction="#HandleGiveMedicine" prefHeight="27.0" prefWidth="68.0" style="-fx-background-color: none;" />
-      <ImageView fx:id="AvatarView" fitHeight="216.0" fitWidth="290.0" layoutX="154.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="AvatarView" fitHeight="144.0" fitWidth="200.0" layoutX="240.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
       <ProgressBar fx:id="ProgressBarHappiness" layoutX="62.0" layoutY="70.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
       <ProgressBar fx:id="ProgressBarCleanliness" layoutX="63.0" layoutY="213.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
       <ProgressBar fx:id="ProgressBarHunger" layoutX="62.0" layoutY="107.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
       <ProgressBar fx:id="ProgressBarThirst" layoutX="62.0" layoutY="142.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
       <ProgressBar fx:id="ProgressBarHealth" layoutX="62.0" layoutY="178.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
+      <ImageView fx:id="AnimationView" fitHeight="133.0" fitWidth="200.0" layoutX="240.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
