@@ -16,63 +16,45 @@ public class ControllerGamePlay extends Controller {
     Avatar avatar;
 
     @FXML
-    private ImageView AvatarView;
+    private Button GiveWaterButton;
+
+    @FXML
+    private Button FeedButton;
 
     @FXML
     private Button PlayButton;
 
     @FXML
-    private Button GiveWaterButton;
+    private Button CleanUpButton;
 
     @FXML
     private Button GiveMedicineButton;
 
     @FXML
-    private Button CleanUpButton;
-
-    @FXML
-    private Button BackGamePlay;
-
-    @FXML
-    private Label Name;
-
-    @FXML
-    private Label HungerLabel;
-
-    @FXML
-    private ProgressBar ProgressBarHunger;
-
-    @FXML
-    private Label ThirstLabel;
-
-    @FXML
-    private ProgressBar ProgressBarThirst;
-
-    @FXML
-    private Label CleanlinessLabel;
-
-    @FXML
-    private ProgressBar ProgressBarCleanliness;
-
-    @FXML
-    private Label HealthLabel;
-
-    @FXML
-    private ProgressBar ProgressBarHealth;
-
-    @FXML
-    private Label HappinessLabel;
+    private ImageView AvatarView;
 
     @FXML
     private ProgressBar ProgressBarHappiness;
 
     @FXML
-    void HandleBackGamePlay(ActionEvent event) {
+    private ProgressBar ProgressBarCleanliness;
+
+    @FXML
+    private ProgressBar ProgressBarHunger;
+
+    @FXML
+    private ProgressBar ProgressBarThirst;
+
+    @FXML
+    private ProgressBar ProgressBarHealth;
+
+    @FXML
+    void HandleCleanUp(ActionEvent event) {
 
     }
 
     @FXML
-    void HandleCleanUp(ActionEvent event) {
+    void HandleFeed(ActionEvent event) {
 
     }
 
@@ -90,6 +72,7 @@ public class ControllerGamePlay extends Controller {
     void HandlePlay(ActionEvent event) {
 
     }
+
 
 
     public ControllerGamePlay(Stage primaryStage, Avatar avatar) {

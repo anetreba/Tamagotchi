@@ -6,6 +6,6 @@ import world.ucode.Controller.ControllerGamePlay;
 
 public class GamePlay extends GameScene {
     public GamePlay(Stage primaryStage, Avatar avatar) {
-        super(primaryStage, "/GamePlay.fxml", new ControllerGamePlay(primaryStage, avatar));
+        super(primaryStage, "/GamePlay2.fxml", new ControllerGamePlay(primaryStage, avatar));
     }
 }
