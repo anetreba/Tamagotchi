@@ -12,6 +12,7 @@ public class Main extends Application {
         try {
             primaryStage.setTitle("Tamagotchi");
             GameMenu menu = new GameMenu(primaryStage);
+            primaryStage.setResizable(false);
         } catch (Exception e) {
             System.err.println("Exception");
         }

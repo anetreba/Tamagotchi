@@ -14,7 +14,7 @@ public abstract class GameScene {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/" + fxmlName));
             loader.setController(Controller);
             PaneRoot = loader.load();
-            scene = new Scene(PaneRoot, 800, 600);
+            scene = new Scene(PaneRoot, 596, 335);
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch(Exception e) {

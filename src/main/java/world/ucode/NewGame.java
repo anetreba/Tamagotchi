@@ -5,7 +5,7 @@ import world.ucode.Controller.ControllerNewGame;
 
 public class NewGame extends GameScene {
     public NewGame(Stage primaryStage) {
-        super(primaryStage, "/NewGame.fxml", new ControllerNewGame(primaryStage));
+        super(primaryStage, "/NewGame2.fxml", new ControllerNewGame(primaryStage));
     }
 
 }
