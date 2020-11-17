@@ -14,7 +14,7 @@ public class DataBase {
     }
 
     public static void CreateDB() throws ClassNotFoundException, SQLException {
-        statmt = Connection.createStatement();
+        statmt = connection.createStatement();
         statmt.execute("CREATE TABLE if not exists 'avatar' " +
                 "('type' text, 'name' text, 'health' DOUBLE , 'happiness' DOUBLE, 'hunger' DOUBLE , 'thirst' DOUBLE, 'cleanliness' DOUBLE);");
     }

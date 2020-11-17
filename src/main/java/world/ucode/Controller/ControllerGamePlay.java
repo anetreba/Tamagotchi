@@ -1,19 +1,25 @@
 package world.ucode.Controller;
 
+import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import world.ucode.Avatar.Action;
 import world.ucode.Avatar.Avatar;
 import world.ucode.Avatar.AvatarAnimation;
+import world.ucode.DataBase.DataBase;
+import world.ucode.GameOver;
 
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ControllerGamePlay extends Controller {
@@ -98,34 +104,34 @@ public class ControllerGamePlay extends Controller {
     @FXML
     ImageView AnimationView;
 
-//    private void startLiveCycle() {
-//        LiveCycle = new Timeline();
-//        LiveCycle.setCycleCount(Timeline.INDEFINITE);
-//
-//        LiveCycle.getKeyFrames().add(
-//                new KeyFrame(Duration.seconds(0.1), new EventHandler<ActionEvent>() {
-//                    @Override
-//                    public void handle(ActionEvent event) {
-//                        if (avatar.LiveCycle() == -1) {
-//                            try {
-//                                DataBase.DeleteDB(avatar.GetName());
-//                            } catch (SQLException throwables) {
-//                                throwables.printStackTrace();
-//                            }
-//                            LiveCycle.stop();
-//                            GameOver menu = new GameOver(primaryStage);
-//                        }
-//                        SetProgress();
-//                    }
-//                }));
-//        LiveCycle.play();
-//    }
+    private void startLiveCycle() {
+        LiveCycle = new Timeline();
+        LiveCycle.setCycleCount(Timeline.INDEFINITE);
+
+        LiveCycle.getKeyFrames().add(
+                new KeyFrame(Duration.seconds(0.1), new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        if (avatar.LiveCycle() == -1) {
+                            try {
+                                DataBase.DeleteDB(avatar.GetName());
+                            } catch (SQLException throwables) {
+                                throwables.printStackTrace();
+                            }
+                            LiveCycle.stop();
+                            GameOver menu = new GameOver(primaryStage);
+                        }
+                        SetProgress();
+                    }
+                }));
+        LiveCycle.play();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 //        primaryStage.getScene().getWindow().addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, this::HandleClose);
         this.animation = new AvatarAnimation(avatar.GetType(),AnimationView, AvatarView);
-//        startLiveCycle();
+        startLiveCycle();
     }
 
     public ControllerGamePlay(Stage primaryStage, Avatar avatar) {

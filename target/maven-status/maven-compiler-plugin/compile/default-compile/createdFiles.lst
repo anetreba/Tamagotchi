@@ -1,10 +1,14 @@
 world/ucode/Avatar/Type.class
 world/ucode/Controller/ControllerGamePlay.class
 world/ucode/Avatar/AvatarAnimation.class
+world/ucode/Controller/ControllerGameOver.class
 world/ucode/Avatar/Avatar.class
 world/ucode/Avatar/Avatar$1.class
 world/ucode/Avatar/Action.class
+world/ucode/Controller/ControllerGamePlay$1.class
 world/ucode/Main.class
+world/ucode/DataBase/DataBase.class
 world/ucode/Controller/ControllerNewGame.class
 world/ucode/GamePlay.class
+world/ucode/GameOver.class
 world/ucode/NewGame.class
