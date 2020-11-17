@@ -8,9 +8,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import world.ucode.Avatar.Action;
 import world.ucode.Avatar.Avatar;
 import world.ucode.Avatar.AvatarAnimation;
 
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -50,29 +52,43 @@ public class ControllerGamePlay extends Controller {
     @FXML
     private ProgressBar ProgressBarHealth;
 
-    @FXML
-    void HandleCleanUp(ActionEvent event) {
-
+    private void SetProgress() {
+        ProgressBarHealth.setProgress(avatar.GetHealth()/avatar.GetMaxHealth());
+        ProgressBarHappiness.setProgress(avatar.GetHappiness()/10);
+        ProgressBarHunger.setProgress(avatar.GetHunger()/10);
+        ProgressBarThirst.setProgress(avatar.GetThirst()/10);
+        ProgressBarCleanliness.setProgress(avatar.GetCleanliness()/10);
     }
 
     @FXML
-    void HandleFeed(ActionEvent event) {
-
+    void HandleCleanUp(ActionEvent event) throws InvocationTargetException, IllegalAccessException {
+        avatar.ActionHandler(Action.CLEAN_UP, avatar);
+        animation.HandleAnimation(Action.CLEAN_UP);
     }
 
     @FXML
-    void HandleGiveMedicine(ActionEvent event) {
-
+    void HandleFeed(ActionEvent event) throws InvocationTargetException, IllegalAccessException {
+        avatar.ActionHandler(Action.FEED, avatar);
+        animation.HandleAnimation(Action.FEED);
     }
 
     @FXML
-    void HandleGiveWater(ActionEvent event) {
+    void HandleGiveMedicine(ActionEvent event) throws InvocationTargetException, IllegalAccessException {
+//        avatar.ActionHandler(Action.GIVE_MEDICINE, avatar);
+//        animation.HandleAnimation(Action.GIVE_MEDICINE);
+    }
 
+
+    @FXML
+    void HandleGiveWater(ActionEvent event) throws InvocationTargetException, IllegalAccessException {
+            avatar.ActionHandler(Action.GIVE_WATER, avatar);
+            animation.HandleAnimation(Action.GIVE_WATER);
     }
 
     @FXML
-    void HandlePlay(ActionEvent event) {
-
+    void HandlePlay(ActionEvent event) throws InvocationTargetException, IllegalAccessException {
+//        avatar.ActionHandler(Action.PLAY, avatar);
+//        animation.HandleAnimation(Action.PLAY);
     }
 
 
@@ -90,9 +106,9 @@ public class ControllerGamePlay extends Controller {
 //                new KeyFrame(Duration.seconds(0.1), new EventHandler<ActionEvent>() {
 //                    @Override
 //                    public void handle(ActionEvent event) {
-//                        if (minion.LiveCycle() == -1) {
+//                        if (avatar.LiveCycle() == -1) {
 //                            try {
-//                                DataBase.DeleteDB(minion.GetName());
+//                                DataBase.DeleteDB(avatar.GetName());
 //                            } catch (SQLException throwables) {
 //                                throwables.printStackTrace();
 //                            }

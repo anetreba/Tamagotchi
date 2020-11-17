@@ -12,12 +12,12 @@ public class AvatarAnimation {
     private final Timeline timeline;
 
 
-    public AvatarAnimation(Type type, ImageView AnimationView, ImageView MinionView) {
+    public AvatarAnimation(Type type, ImageView AnimationView, ImageView AvatarView) {
         this.AnimationView = AnimationView;
         this.type = type;
         this.timeline = new Timeline(new KeyFrame(Duration.seconds(4), actionEvent -> AnimationView.setVisible(false)));
         AnimationView.setVisible(false);
-        MinionView.setImage(new Image("/GamePlay/" + type.toString() + "/" + "happiness.gif"));
+        AvatarView.setImage(new Image("/GamePlay/" + type.toString() + "/" + "happiness.gif"));
     }
 
     public void HandleAnimation(Action action) {
