@@ -4,7 +4,7 @@ public enum Action {
 //    PLAY("Play"),
     FEED("feed"),
     GIVE_WATER("givewater"),
-//    GIVE_MEDICINE("medicine"),
+    GIVE_MEDICINE("medicine"),
     CLEAN_UP("cleanup");
 
     private final String name;

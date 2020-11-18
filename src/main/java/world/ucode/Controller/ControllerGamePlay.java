@@ -80,8 +80,8 @@ public class ControllerGamePlay extends Controller {
 
     @FXML
     void HandleGiveMedicine(ActionEvent event) throws InvocationTargetException, IllegalAccessException {
-//        avatar.ActionHandler(Action.GIVE_MEDICINE, avatar);
-//        animation.HandleAnimation(Action.GIVE_MEDICINE);
+        avatar.ActionHandler(Action.GIVE_MEDICINE, avatar);
+        animation.HandleAnimation(Action.GIVE_MEDICINE);
     }
 
 
