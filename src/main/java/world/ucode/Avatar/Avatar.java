@@ -21,7 +21,7 @@ public class Avatar {
 //            put(Action.PLAY, Avatar.class.getDeclaredMethod("play"));
             put(Action.FEED, Avatar.class.getDeclaredMethod("feed"));
             put(Action.GIVE_WATER, Avatar.class.getDeclaredMethod("giveWater"));
-//            put(Action.GIVE_MEDICINE, Avatar.class.getDeclaredMethod("giveMadicine"));
+            put(Action.GIVE_MEDICINE, Avatar.class.getDeclaredMethod("giveMadicine"));
             put(Action.CLEAN_UP, Avatar.class.getDeclaredMethod("cleanUp"));
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
@@ -34,20 +34,20 @@ public class Avatar {
         System.out.println("********************\n" + name + " " + type.toString() + "\n********************");
     }
 
-//    public Avatar(ResultSet Avatar) {
-//        try {
-//            type = toType(Avatar.getString("type"));
-//            name = Avatar.getString("name");
-//            health = Double.parseDouble(Avatar.getString("health"));
-//            happiness = Double.parseDouble(Avatar.getString("happiness"));
-//            hunger = Double.parseDouble(Avatar.getString("hunger"));
-//            thirst = Double.parseDouble(Avatar.getString("thirst"));
-//            cleanliness = Double.parseDouble(Avatar.getString("cleanliness"));
-//        }
-//        catch(SQLException ignored) {
-//            System.err.println("SQLException");
-//        }
-//    }
+    public Avatar(ResultSet Avatar) {
+        try {
+            type = toType(Avatar.getString("type"));
+            name = Avatar.getString("name");
+            health = Double.parseDouble(Avatar.getString("health"));
+            happiness = Double.parseDouble(Avatar.getString("happiness"));
+            hunger = Double.parseDouble(Avatar.getString("hunger"));
+            thirst = Double.parseDouble(Avatar.getString("thirst"));
+            cleanliness = Double.parseDouble(Avatar.getString("cleanliness"));
+        }
+        catch(SQLException ignored) {
+            System.err.println("SQLException");
+        }
+    }
 
     public Type toType(String type) {
         if (type.equals("girl"))

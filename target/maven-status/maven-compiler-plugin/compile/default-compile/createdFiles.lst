@@ -11,4 +11,6 @@ world/ucode/DataBase/DataBase.class
 world/ucode/Controller/ControllerNewGame.class
 world/ucode/GamePlay.class
 world/ucode/GameOver.class
+world/ucode/Controller/ControllerLoadGame.class
+world/ucode/LoadGame.class
 world/ucode/NewGame.class

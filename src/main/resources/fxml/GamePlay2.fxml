@@ -6,11 +6,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="335.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="336.0" fitWidth="595.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-18.75" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="336.0" fitWidth="595.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="@/GamePlay/Background.png" />
+            <Image url="@/GamePlay/Background1.png" />
          </image>
       </ImageView>
       <Button fx:id="GiveWaterButton" layoutX="502.0" layoutY="103.0" mnemonicParsing="false" onAction="#HandleGiveWater" prefHeight="22.0" prefWidth="93.0" style="-fx-background-color: none;" />
@@ -25,5 +25,6 @@
       <ProgressBar fx:id="ProgressBarThirst" layoutX="62.0" layoutY="142.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
       <ProgressBar fx:id="ProgressBarHealth" layoutX="62.0" layoutY="178.0" prefHeight="33.0" prefWidth="76.0" progress="0.0" />
       <ImageView fx:id="AnimationView" fitHeight="241.0" fitWidth="277.0" layoutX="160.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="521.0" layoutY="233.0" mnemonicParsing="false" onAction="#HandleBackGamePlay" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: none;" />
    </children>
 </AnchorPane>

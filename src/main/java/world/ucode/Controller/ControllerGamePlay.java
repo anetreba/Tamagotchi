@@ -10,11 +10,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 import world.ucode.Avatar.Action;
 import world.ucode.Avatar.Avatar;
 import world.ucode.Avatar.AvatarAnimation;
 import world.ucode.DataBase.DataBase;
+import world.ucode.GameMenu;
 import world.ucode.GameOver;
 
 import java.lang.reflect.InvocationTargetException;
@@ -127,9 +129,14 @@ public class ControllerGamePlay extends Controller {
         LiveCycle.play();
     }
 
+    private void HandleClose(WindowEvent event){
+        LiveCycle.stop();
+        Save();
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-//        primaryStage.getScene().getWindow().addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, this::HandleClose);
+        primaryStage.getScene().getWindow().addEventFilter(WindowEvent.WINDOW_CLOSE_REQUEST, this::HandleClose);
         this.animation = new AvatarAnimation(avatar.GetType(),AnimationView, AvatarView);
         startLiveCycle();
     }
@@ -137,6 +144,23 @@ public class ControllerGamePlay extends Controller {
     public ControllerGamePlay(Stage primaryStage, Avatar avatar) {
         super(primaryStage);
         this.avatar = avatar;
+    }
+
+    @FXML
+    private void HandleBackGamePlay() {
+        LiveCycle.stop();
+        Save();
+        GameMenu menu = new GameMenu(primaryStage);
+    }
+
+    private void Save(){
+        try {
+            DataBase.WriteDB(avatar.GetType().toString(), avatar.GetName(), avatar.GetHealth(), avatar.GetHappiness(),
+                    avatar.GetHunger(), avatar.GetThirst(), avatar.GetCleanliness());;
+        }
+        catch (SQLException ignored) {
+            System.err.println("SQLException");
+        }
     }
 
 }

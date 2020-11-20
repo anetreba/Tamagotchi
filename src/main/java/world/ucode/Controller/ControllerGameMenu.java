@@ -2,6 +2,7 @@ package world.ucode.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import world.ucode.LoadGame;
 import world.ucode.NewGame;
 
 import java.net.URL;
@@ -31,6 +32,7 @@ public class ControllerGameMenu extends Controller {
     @FXML
      void HandleLoadGame() {
         System.out.println("LOAD GAME BUTTON CLICKED");
+        LoadGame loadGame = new LoadGame(primaryStage);
     }
     @FXML
      void exit() {
